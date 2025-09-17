@@ -1,0 +1,11 @@
+P = float(input("Enter Principal Amount (P): "))
+R = float(input("Enter Annual Interest Rate (%) (R): "))
+T = float(input("Enter Time Period in Years (T): "))
+
+if P < 1 or P > 2147483647:
+    print("Error: Principal amount must be between 1 and 2^31 - 1.")
+elif R < 1.0 or R > 8.5:
+    print("Error: Interest rate must be between 1.0 and 8.5.")
+else:
+    A = P * (1 + R / 100) ** T
+    print("A = {:.2f}".format(A))
